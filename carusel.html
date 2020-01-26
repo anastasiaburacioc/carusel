@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carusel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    
+    <style>
+    body{
+        background-color: #333344;
+    }
+    .position_abolute{
+        position: absolute;
+    }
+    .box-shadow{
+        box-shadow: 0 0 3px 1.5px #222;
+    }
+    .carusel{
+        position: relative;
+        width:480px ;
+        height: 300px;
+        margin: auto;
+    }
+    .images{
+        width: 400px;
+        height: 175px;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .img:nth-child(1),
+    .img:nth-child(3){
+        top: calc(50% - 62.5px);
+    }
+    .img:nth-child(2){
+        left: calc(50% - 150px);
+    }  
+    .img:nth-child(3){
+        right: 0;
+        z-index: -1;
+    } 
+    .arrow-left,
+    .arrow-right{  
+        top: calc(50% - 12.5px);
+        border-radius: 50%;
+    }
+    .arrow-right{
+        right: 0;
+    } 
+    .fa-arrow-alt-circle-left,
+    .fa-arrow-alt-circle-right{
+        color: #d3d027;
+        font-size: 25px;
+    }
+    .box{ 
+        right: calc(50% - 14.5px);
+        bottom: 44px;
+    }  
+    .box>div{
+        width: 5px;
+        height: 5px;
+        border: 1px solid #d3d027;
+        display:inline-block;
+    }
+    .box>div:nth-of-type(2){
+        background-color: #d3d027;
+    }
+    
+    </style>
+</head>
+<body>
+<div class="carusel">
+    <div class="arrow-left position_abolute box-shadow"><a href="#"><i class="fas fa-arrow-alt-circle-left"></i></a></div>
+    <div class="images position_abolute">
+        <img class="img position_abolute box-shadow" src="https://i.picsum.photos/id/866/200/125.jpg" alt="">
+        <img class="img position_abolute box-shadow" src="https://i.picsum.photos/id/826/300/175.jpg" alt="">
+        <img class="img position_abolute box-shadow" src="https://i.picsum.photos/id/827/200/125.jpg" alt="">
+    </div>
+    <div class="arrow-right position_abolute box-shadow"><a href="#"><i class="fas fa-arrow-alt-circle-right"></i></a></div>
+    <div class="box position_abolute">
+        <div class="box__one"></div>
+        <div class="box__two"></div>
+        <div class="box__three"></div>
+    </div>
+</div>
+</body>
+</html>
